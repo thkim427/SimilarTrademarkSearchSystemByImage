@@ -1,0 +1,39 @@
+<div class="col-lg-12 col-xl-12">
+    <div class="card">
+        <div class="card-header">순위 테이블
+            <ul class="actions top-right">
+                <li><a href="javascript:void(0)" data-q-action="card-expand"><i class="icon dripicons-expand-2"></i></a></li>
+            </ul>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table id="recent-transaction-table" class="table table-striped table-bordered" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>출원번호</th>
+                            <th>상표명</th>
+                            <th>등록일</th>
+                            <th>등록자</th>
+                            <th>상태</th>
+                            <th class="no-sort">이미지</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for i in range(10) %}
+                        <tr>
+                            <td>{% if sql_obj|length == 0  %}0{% else %}{{sql_obj[i]['applicationnumber']}}{% endif %}</td>
+                            <td>{% if sql_obj|length == 0  %}0{% else %}{{sql_obj[i]['title']}}{% endif %}</td>
+                            <td>{% if sql_obj|length == 0  %}0{% else %}{{sql_obj[i]['applicationdate']}}{% endif %}</td>
+                            <td>{% if sql_obj|length == 0  %}0{% else %}{{sql_obj[i]['agentname']}}{% endif %}</td>
+                            <td>{% if sql_obj|length == 0  %}0{% else %}{{sql_obj[i]['applicationstatus']}}{% endif %}</td>
+                            <td>
+                                <a href="{% if sql_obj|length == 0  %}#{% else %}{{sql_obj[i]['bigdraw']}}{% endif %}"><i class="icon dripicons-download"></i></a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>MarkSearch</title>
+
+        {%- include 'header.html' %}
+        {%- block header %}
+        {%- endblock header %}
+    </head>
+    <body class="layout-fixed fixed-menu">
+        <div id="app">
+            {%- include 'navbar.html' %}
+            <div class="content">
+                {%- include 'section/pageheader.html' %}
+                {%- include 'section/section1.html' %}
+                {%- include 'section/section2.html' %}
+                {%- block contents  %}
+                {%- endblock contents  %}
+                {%- include 'section/section6.html' %}
+
+            </div>
+        </div>
+        {%- include 'script.html' %}
+        {%- block scripts %}
+        {%- endblock scripts %}
+    </body>
+</html>

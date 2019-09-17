@@ -1,0 +1,84 @@
+<div class="card">
+    <div class="row m-0 col-border-xl">
+        <div class="col-md-12 col-lg-6 col-xl-3">
+            <div class="card-body">
+                <div class="icon-rounded icon-rounded-primary float-left m-r-20">
+                    <i class="la la-database"></i>
+                </div>
+                <h5 class="card-title m-b-5 counter" data-count="2108739">0</h5>
+                <h6 class="text-muted m-t-10">
+                    수집 DB
+                </h6>
+                <div class="progress progress-active-sessions mt-4" style="height:7px;">
+                    <div class="progress-bar bg-primary" role="progressbar" style="" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <small class="text-muted float-left m-t-5 mb-3">
+                    수집량 / 전체
+                </small>
+                <small class="text-muted float-right m-t-5 mb-3 counter append-percent" data-count="60">
+                    0
+                </small>
+            </div>
+        </div>
+        <div class="col-md-12 col-lg-6 col-xl-3">
+            <div class="card-body">
+                <div class="icon-rounded icon-rounded-accent float-left m-r-20">
+                    <i class="la la-file-image-o"></i>
+                </div>
+                <h5 class="card-title m-b-5 counter" data-count="1200000">0</h5>
+                <h6 class="text-muted m-t-10">
+                    가공된 이미지 개수
+                </h6>
+                <div class="progress progress-add-to-cart mt-4" style="height:7px;">
+                    <div class="progress-bar bg-accent" role="progressbar" style="" aria-valuenow="57" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <small class="text-muted float-left m-t-5 mb-3">
+                    이미지 / DB
+                </small>
+                <small class="text-muted float-right m-t-5 mb-3 counter append-percent" data-count="57">
+                    0
+                </small>
+            </div>
+        </div>
+        <div class="col-md-12 col-lg-6 col-xl-3">
+            <div class="card-body">
+                <div class="icon-rounded icon-rounded-info float-left m-r-20">
+                    <i class="la la-gear"></i>
+                </div>
+                <h5 class="card-title m-b-5 counter" data-count="1080000">0</h5>
+                <h6 class="text-muted m-t-10">
+                    모델 생성
+                </h6>
+                <div class="progress progress-new-account mt-4" style="height:7px;">
+                    <div class="progress-bar bg-info" role="progressbar" style="" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <small class="text-muted float-left m-t-5 mb-3">
+                    Loss 비율
+                </small>
+                <small class="text-muted float-right m-t-5 mb-3 counter append-percent" data-count="10">
+                    0
+                </small>
+            </div>
+        </div>
+        <div class="col-md-12 col-lg-6 col-xl-3">
+            <div class="card-body">
+                <div class="icon-rounded icon-rounded-success float-left m-r-20">
+                    <i class="la la-crosshairs"></i>
+                </div>
+                <h5 class="card-title m-b-5 counter" data-count="10">0</h5>
+                <h6 class="text-muted m-t-10">
+                    유사도 추천 개수
+                </h6>
+                <div class="progress progress-total-revenue mt-4" style="height:7px;">
+                    <div class="progress-bar bg-success" role="progressbar" style="" aria-valuenow="{{ Distance.distance_max }} or 50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <small class="text-muted float-left m-t-5 mb-3">
+                    Distance Max값
+                </small>
+                <small class="text-muted float-right m-t-5 mb-3 counter" data-count="{{ Distance.distance_max}} or 50">
+                    {{ Distance.distance_max|round(2)}}
+                </small>
+            </div>
+        </div>
+    </div>
+</div>
